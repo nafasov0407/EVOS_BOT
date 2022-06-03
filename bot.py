@@ -16,7 +16,15 @@ async def send_welcome(message: types.Message):
 
 @dp.message_handler(text = "🇺🇿 O'zbekcha")
 async def uzb(message: types.Message):
-    await message.answer("<b>Iltimos pastdagi knopkalardan tanlang👇👇👇</b>",parse_mode = 'HTML',reply_markup = tur)
+    await message.answer("<b>Iltimos raqamingizni jo'nating</b>",parse_mode = 'HTML',reply_markup = raqam)
+
+@dp.message_handler(text = "📞Telefon raqam")
+async def uzb(message: types.Message):
+    await message.answer("<b>Iltimos joylashuvni jo'nating</b>",parse_mode = 'HTML',reply_markup = joy)
+
+@dp.message_handler(text = "📍Joylashuv yuborish")
+async def uzb(message: types.Message):
+    await message.answer("<b>Kategoryani tanlang</b>",parse_mode = 'HTML',reply_markup = menyu)
 
 #Menyu uchun
 
@@ -88,6 +96,7 @@ async def lav_vash(call:CallbackQuery):
     Narxi:19000
     Iltimos sonini tanlang """,reply_markup = lavash_menyu6)
     await call.message.delete()
+
 
 @dp.callback_query_handler(text="big_gush")
 async def lav_vash(call:CallbackQuery):

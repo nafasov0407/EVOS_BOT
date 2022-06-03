@@ -14,13 +14,28 @@ tur = ReplyKeyboardMarkup(
 		[
 				KeyboardButton(text="📖Menyu")
 		],
+	],
+	resize_keyboard = True
+)
+
+raqam = ReplyKeyboardMarkup(
+	keyboard = [
 		[
-				KeyboardButton(text="📞Telefon raqam"),KeyboardButton(text="📍Joylashuv yuborish")
+				KeyboardButton(text="📞Telefon raqam")
 		],
 	],
 	resize_keyboard = True
 )
 
+
+joy = ReplyKeyboardMarkup(
+	keyboard = [
+		[
+				KeyboardButton(text="📍Joylashuv yuborish")
+		],
+	],
+	resize_keyboard = True
+)
 xizmatlar = ReplyKeyboardMarkup(
 	keyboard = [
 		[
