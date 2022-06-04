@@ -12,7 +12,7 @@ til = ReplyKeyboardMarkup(
 tur = ReplyKeyboardMarkup(
 	keyboard = [
 		[
-				KeyboardButton(text="📖Menyu")
+				KeyboardButton(text="📖buyurtma berish")
 		],
 	],
 	resize_keyboard = True
