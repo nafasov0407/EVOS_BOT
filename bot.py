@@ -32,11 +32,11 @@ async def uzb(message):
 @dp.message_handler(content_types = ['location'])
 async def uzb(message):
     print(message.location)
-    await message.reply("<b>Xush kelibsiz\nbizning EVOS botimizga\nIltimos menyuni tanlang!</b>",parse_mode = 'HTML',reply_markup = tur)
+    await message.reply("<b>Xush kelibsiz\nbizning EVOS botimizga\nIltimos buyurma bering</b>",parse_mode = 'HTML',reply_markup = tur)
 
 #Menyu uchun
 
-@dp.message_handler(text="📖Menyu")
+@dp.message_handler(text="📖buyurtma berish")
 async def men(message: types.Message):
     await message.answer("<b>Kategoryadan tanlang </b>",parse_mode = 'HTML',reply_markup = menyu)
 
