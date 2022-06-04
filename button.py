@@ -21,7 +21,7 @@ tur = ReplyKeyboardMarkup(
 raqam = ReplyKeyboardMarkup(
 	keyboard = [
 		[
-				KeyboardButton(text="📞Telefon raqam")
+				KeyboardButton(text="📞Telefon raqam",request_contact = True)
 		],
 	],
 	resize_keyboard = True
@@ -31,7 +31,7 @@ raqam = ReplyKeyboardMarkup(
 joy = ReplyKeyboardMarkup(
 	keyboard = [
 		[
-				KeyboardButton(text="📍Joylashuv yuborish")
+				KeyboardButton(text="📍Joylashuv yuborish",request_location = True)
 		],
 	],
 	resize_keyboard = True

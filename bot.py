@@ -13,18 +13,26 @@ dp = Dispatcher(bot)
 @dp.message_handler(commands=['start', 'help'])
 async def send_welcome(message: types.Message):
     await message.reply("<b>Tilni tanlang</b>",parse_mode = 'HTML',reply_markup = til)
+    print(message.from_user.first_name)
+    print(message.from_user.last_name)
+    print(message.from_user.username)
+    print(message.from_user.id)
 
 @dp.message_handler(text = "🇺🇿 O'zbekcha")
-async def uzb(message: types.Message):
-    await message.answer("<b>Iltimos raqamingizni jo'nating</b>",parse_mode = 'HTML',reply_markup = raqam)
+async def uzb(message:types.Message):
+    await message.reply(text = "Iltimos raqamingizni yuboring!",reply_markup = raqam)
+    
+@dp.message_handler(content_types = ['contact'])
+async def uzb(message):
+    username = message.from_user.username
+    telefon = message.contact.['phone_number']
+    #await bot.send_message(chat_id = ,text = "Username:{username}\nTelefon raqam:{telefon}")
+    await message.reply("<b>Iltimos joylashuvni jo'nating</b>",parse_mode = 'HTML',reply_markup = joy)
 
-@dp.message_handler(text = "📞Telefon raqam")
-async def uzb(message: types.Message):
-    await message.answer("<b>Iltimos joylashuvni jo'nating</b>",parse_mode = 'HTML',reply_markup = joy)
-
-@dp.message_handler(text = "📍Joylashuv yuborish")
-async def uzb(message: types.Message):
-    await message.answer("<b>Kategoryani tanlang</b>",parse_mode = 'HTML',reply_markup = menyu)
+@dp.message_handler(content_types = ['location'])
+async def uzb(message):
+    print(message.location)
+    await message.reply("<b>Xush kelibsiz\nbizning EVOS botimizga\nIltimos menyuni tanlang!</b>",parse_mode = 'HTML',reply_markup = tur)
 
 #Menyu uchun
 
