@@ -13,10 +13,10 @@ dp = Dispatcher(bot)
 @dp.message_handler(commands=['start', 'help'])
 async def send_welcome(message: types.Message):
     await message.reply("<b>Tilni tanlang</b>",parse_mode = 'HTML',reply_markup = til)
-    print(message.from_user.first_name)
-    print(message.from_user.last_name)
-    print(message.from_user.username)
-    print(message.from_user.id)
+    # print(message.from_user.first_name)
+    # print(message.from_user.last_name)
+    # print(message.from_user.username)
+    # print(message.from_user.id)
 
 @dp.message_handler(text = "🇺🇿 O'zbekcha")
 async def uzb(message:types.Message):
@@ -24,9 +24,9 @@ async def uzb(message:types.Message):
     
 @dp.message_handler(content_types = ['contact'])
 async def uzb(message):
-    username = message.from_user.username
-    telefon = message.contact.['phone_number']
-    #await bot.send_message(chat_id = ,text = "Username:{username}\nTelefon raqam:{telefon}")
+    # username = message.from_user.username
+    # telefon = message.contact.['phone_number']
+    # #await bot.send_message(chat_id = ,text = "Username:{username}\nTelefon raqam:{telefon}")
     await message.reply("<b>Iltimos joylashuvni jo'nating</b>",parse_mode = 'HTML',reply_markup = joy)
 
 @dp.message_handler(content_types = ['location'])
