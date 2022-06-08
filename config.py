@@ -1,3 +1,1 @@
-
-#TOKEN = '5384582642:AAFpK_jyLLFafRSfG6iwq8_uQ7f78Vr2OLw'
-TOKEN = "5516457556:AAHdwENO5Irzv9f9rH9eN5itU5GrLQjTPR0"
+TOKEN = 'Bu yerga tokeeni yozasiz'
